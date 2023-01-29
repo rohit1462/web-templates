@@ -1,0 +1,151 @@
+@import url('base.css');
+
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins' , sans-serif;
+}
+
+body
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f7f7f7;
+}
+.wrapper
+{
+    background-color: #fff;
+    width:450px;
+    border-radius: 16px;
+    box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
+                0 32px 64px -48px rgba(0,0,0,0.5);
+}
+
+/* Signup form css code */
+.form
+{
+    padding: 25px 30px;
+}
+header
+{
+    height: 60px;
+    line-height: 60px;
+    font-size:25px;
+    font-weight: 600px;
+    padding-bottom:10px;
+    border-bottom:1px solid #e6e6e6;
+    background-color:#4071f4 ;
+    color: white;
+    text-align: center;
+    cursor:default;
+
+}
+.form form
+{
+    /* background-color: red; */
+    margin:20px 0;
+}
+.form form .error-txt
+{
+    /* color:#721c24; */
+    color:rgb(255, 4, 4);
+    /* background-color: #f8d7da; */
+    background-color: rgb(243, 243, 113);
+    padding: 8px 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    /* display: none; */
+}
+.form form .field
+{
+    display: flex;
+    flex-direction: column;
+    margin-bottom:10px;
+    position: relative;
+}
+.form form .field input
+{
+    outline: none;
+}
+.form form .input input
+{
+    height:40px;
+    width:100%;
+    font-size: 16px;
+    padding:0 10px;
+    border:1px solid #ccc;
+    border-radius: 5px;
+}
+.form form .field label
+{
+    margin-bottom: 2px;
+}
+.form form .name-details
+{
+    display: flex;
+}
+.form form .name-details .field:first-child
+{
+    margin-right:10px;
+}
+.form form .name-details .field:last-child
+{
+    margin-left:10px;
+}
+.form form .image input
+{
+    font-size:17px;
+}
+.form form .button input
+{
+    margin-top:13px;
+    height: 45px;
+    border:none;
+    font-size: 17px;
+    font-weight: 500;
+    background-color:#4071f4;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+.form form .field i
+{
+    position: absolute;
+    right:15px;
+    top:70%;
+    transform: translateY(-50%);
+    cursor:pointer;
+    color:#ccc;
+}
+.form form .field i.active::before
+{
+    content: "\f070";
+    color:#333;
+}
+.form .link
+{
+    text-align: center;
+    margin: 10px 0;
+    font-size: 17px;
+}
+.form .link a 
+{
+    color:#333;
+}
+.form .link a:hover
+{
+    text-decoration: underline;
+}
+
+.form .link a
+{
+    color:blue;
+    text-decoration:underline;
+}

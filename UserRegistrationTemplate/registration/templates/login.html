@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block titletag %} <title>Login Page</title> {% endblock titletag %}
+
+{% block csslinktag %}<link rel="stylesheet" href="{% static 'css/login.css' %}">{% endblock csslinktag %}
+
+{% block bodytag %}
+<div class="wrapper">
+    <header>
+        Login
+    </header>
+    <section class="form signup">
+       
+        <form action="" method="POST">
+            {% csrf_token %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="{% if message.tags == 'error' %}{{message.tags}}{% endif %}-txt">
+                        {{message}}
+                    </div>
+                {% endfor %}
+            {% endif %} 
+                <div class="field input">
+                    {{form.username.label_tag}}
+                    {% if 'username' in form.errors.keys %}
+                    <div class="error-txt"> 
+                        {{form.errors.username}}
+                    </div>
+                    {% endif %}
+                    {{form.username}}
+                    <!-- <label>Email Address</label>
+                    <input type="text" placeholder="Email Address"> -->
+                </div>
+                <div class="field input">
+                    {{form.password.label_tag}}
+                    {% if 'password' in form.errors.keys %}
+                    <div class="error-txt"> 
+                        {{form.errors.password}}
+                    </div>
+                    {% endif %}
+                    {{form.password}}
+                    <!-- <label>Password</label>
+                    <input type="password" placeholder="Password"> -->
+                    <i class="fas fa-eye"></i>
+                </div>
+                <div class="field button">
+                    <input type="submit" value="Start">
+                </div>
+            <div class="link">
+                Not yet Registered? <a href="{% url 'signup' %}">Register now</a>
+            </div>
+        </form>
+    </section>
+</div>
+<script src="{% static 'js/pass-show-hide.js' %}"></script>
+{% endblock bodytag %}

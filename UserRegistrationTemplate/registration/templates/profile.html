@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titletag %}<title>Profile Page</title>{% endblock titletag %}
+
+{% block csslinktag %}<link rel="stylesheet" href="{% static 'css/profile.css' %}">{% endblock csslinktag %}
+
+{% block bodytag %}
+    <h1>Hello {{name}} this is a profile page</h1>
+
+    <a href="{% url 'logout' %}">logout</a>
+    <a href="{% url 'changepass' %}">Change Password</a>
+    <a href="{% url 'resetpass' %}">Reset Password</a><br>
+
+
+    {% if messages %}
+        {% for message in messages %}
+            {% if message.tags == 'success' %}
+                {{message}}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endblock bodytag %}

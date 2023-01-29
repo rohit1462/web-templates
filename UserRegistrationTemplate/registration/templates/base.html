@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block titletag %}<title>Base Template</title>{% endblock titletag %}
+    {% block csslinktag %}<link rel="stylesheet" href="{% static 'css/base.css' %}">{% endblock csslinktag %}
+    <script src="https://kit.fontawesome.com/e1e8b8ff06.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    {% block bodytag %}
+    <h1>this is a base html template</h1>
+    {% endblock bodytag %}
+    <script src="{% static 'js/base.js' %}"></script>
+</body>
+</html>
